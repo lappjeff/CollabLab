@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "./components/Login";
+import Login from "./components/auth/Login";
 import cookie from "js-cookie";
 import "bootstrap/dist/css/bootstrap.min.css";
 
