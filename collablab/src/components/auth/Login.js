@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import "../styles/login.scss";
+import "../../styles/login.scss";
 
 const Login = () => {
 	const loginUser = () => {
