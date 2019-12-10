@@ -1,11 +1,14 @@
 import React from "react";
-import LandingPage from "./components/LandingPage";
+import Login from "./components/Login";
+import cookie from "js-cookie";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+const isLoggedIn = cookie.get("spotifyAccessToken") ? true : false;
 
 function App() {
 	return (
 		<div className="App">
-			<LandingPage />
+			<Login />
 		</div>
 	);
 }
