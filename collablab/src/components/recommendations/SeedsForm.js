@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Container, FormGroup, Button, Col } from "reactstrap";
+import cookie from "js-cookie";
+import React, { useState } from "react";
+import { FormGroup, Button, Col } from "reactstrap";
 import SliderControl from "./SliderControl";
 import SpotifyWebApi from "spotify-web-api-js";
-import cookie from "js-cookie";
 
+const accessToken = cookie.get("spotifyAccessToken");
 const spotify = new SpotifyWebApi();
+spotify.setAccessToken(accessToken);
 
 const SeedsForm = () => {
 	const [seedValues, setSeedValues] = useState({
@@ -18,11 +20,6 @@ const SeedsForm = () => {
 		tempo: 0,
 		valence: 0
 	});
-
-	const accessToken = cookie.get("spotifyAccessToken");
-	useEffect(() => {
-		spotify.setAccessToken(accessToken);
-	}, [accessToken]);
 
 	const customSetSeedValues = (event, propertyName) => {
 		let newPropertiesObject = {

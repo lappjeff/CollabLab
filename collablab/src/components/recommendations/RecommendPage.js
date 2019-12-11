@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Row } from "reactstrap";
 import SeedsForm from "./SeedsForm";
 import MusicSeeder from "./MusicSeeder";
+import { Container, Row } from "reactstrap";
 
 const RecommendPage = () => {
 	return (
