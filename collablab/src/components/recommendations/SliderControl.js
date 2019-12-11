@@ -1,14 +1,14 @@
 import React from "react";
 import { Label, CustomInput } from "reactstrap";
-
+import "../../styles/sliderControl.scss";
 const SliderControl = ({ propertyName, value, handler }) => {
-	const valueCounter = propertyName => {
+	const valueCounter = () => {
 		return <span className="text-info">{value / 100}</span>;
 	};
 
 	return (
 		<>
-			<Label for={propertyName}>
+			<Label for={propertyName} className="capitalize">
 				{propertyName}: {valueCounter(propertyName)}
 			</Label>
 			<CustomInput
