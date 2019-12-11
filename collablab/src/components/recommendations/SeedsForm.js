@@ -32,8 +32,8 @@ const SeedsForm = () => {
 	};
 
 	return (
-		<Container className="d-flex justify-content-center">
-			<FormGroup className="w-50 m-3">
+		<Container>
+			<FormGroup className="m-3">
 				{Object.keys(seedValues).map(key => {
 					return (
 						<SliderControl
