@@ -9,10 +9,12 @@ spotify.setAccessToken(accessToken);
 
 const MusicSeeder = () => {
 	const [searchInput, setSearchInput] = useState("");
+	const [tracks, setTracks] = useState(undefined);
 
 	const searchSong = async name => {
 		try {
-			const tracks = await spotify.searchTracks(name, { limit: 6 });
+			const fetchedTracks = await spotify.searchTracks(name, { limit: 6 });
+			setTracks(fetchedTracks.tracks.items);
 		} catch (err) {
 			console.log(err);
 		}
@@ -26,7 +28,7 @@ const MusicSeeder = () => {
 					setSearchInput(e.target.value);
 				}}
 			></Input>
-			<SongsList />
+			<SongsList songs={tracks && tracks} />
 			<Button
 				onClick={e => {
 					searchSong(searchInput);
