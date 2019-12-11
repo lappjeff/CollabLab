@@ -2,7 +2,7 @@ import cookie from "js-cookie";
 import React, { useState } from "react";
 import { Col, Input, Button } from "reactstrap";
 import SpotifyWebApi from "spotify-web-api-js";
-
+import SongsList from "../songs/SongsList";
 const accessToken = cookie.get("spotifyAccessToken");
 const spotify = new SpotifyWebApi();
 spotify.setAccessToken(accessToken);
@@ -12,7 +12,7 @@ const MusicSeeder = () => {
 
 	const searchSong = async name => {
 		try {
-			const track = await spotify.searchTracks(name, { limit: 1 });
+			const tracks = await spotify.searchTracks(name, { limit: 6 });
 		} catch (err) {
 			console.log(err);
 		}
@@ -27,6 +27,7 @@ const MusicSeeder = () => {
 					setSearchInput(e.target.value);
 				}}
 			></Input>
+			<SongsList />
 			<Button
 				onClick={e => {
 					searchSong(searchInput);
