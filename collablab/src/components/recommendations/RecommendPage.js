@@ -5,7 +5,7 @@ import { Container, Row } from "reactstrap";
 
 const RecommendPage = () => {
 	return (
-		<Container>
+		<Container className="p-3">
 			<Row>
 				<SeedsForm />
 				<MusicSeeder />

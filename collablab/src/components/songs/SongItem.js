@@ -1,7 +1,7 @@
 import React from "react";
 
 const SongItem = ({ song }) => {
-	return <h1>Songitem</h1>;
+	return <p>Songitem</p>;
 };
 
 export default SongItem;

@@ -30,7 +30,7 @@ const SeedsForm = () => {
 
 	return (
 		<Col>
-			<FormGroup className="m-3">
+			<FormGroup>
 				{Object.keys(seedValues).map(key => {
 					return (
 						<SliderControl

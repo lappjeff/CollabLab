@@ -19,7 +19,6 @@ const MusicSeeder = () => {
 	};
 	return (
 		<Col>
-			<h1>MusicSeeder</h1>
 			<Input
 				value={searchInput}
 				placeholder="Search song"
