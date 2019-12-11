@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, FormGroup, Button } from "reactstrap";
+import { Container, FormGroup, Button, Col } from "reactstrap";
 import SliderControl from "./SliderControl";
 import SpotifyWebApi from "spotify-web-api-js";
 import cookie from "js-cookie";
@@ -32,7 +32,7 @@ const SeedsForm = () => {
 	};
 
 	return (
-		<Container>
+		<Col>
 			<FormGroup className="m-3">
 				{Object.keys(seedValues).map(key => {
 					return (
@@ -48,7 +48,7 @@ const SeedsForm = () => {
 					Get Recommendations
 				</Button>
 			</FormGroup>
-		</Container>
+		</Col>
 	);
 };
 
