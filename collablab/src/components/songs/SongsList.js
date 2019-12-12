@@ -1,12 +1,12 @@
 import React from "react";
 import SongItem from "./SongItem";
-const SongsList = () => {
+const SongsList = ({ songs }) => {
 	return (
 		<div>
-			SongsList
-			<p>
-				<SongItem />
-			</p>
+			{songs &&
+				songs.map(song => {
+					return <SongItem song={song} key={song.uri} />;
+				})}
 		</div>
 	);
 };
