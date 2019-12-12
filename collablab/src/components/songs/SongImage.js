@@ -1,8 +1,11 @@
 import React from "react";
 
-const SongImage = ({ image }) => {
+const SongImage = ({ song }) => {
 	return (
-		<img src={image.url} onMouseEnter={() => console.log("hover state")}></img>
+		<img
+			src={song.album.images[2].url}
+			onMouseEnter={() => console.log("hover state")}
+		></img>
 	);
 };
 export default SongImage;

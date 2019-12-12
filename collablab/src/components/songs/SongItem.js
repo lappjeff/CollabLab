@@ -6,7 +6,7 @@ const SongItem = ({ song }) => {
 	return (
 		<Row className="m-1 w-70 align-items-center">
 			<Toast>
-				<ToastHeader icon={<SongImage image={song.album.images[2]} />}>
+				<ToastHeader icon={<SongImage song={song} />}>
 					{song.name} -{song.artists[0].name}
 				</ToastHeader>
 			</Toast>
